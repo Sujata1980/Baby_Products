@@ -1,0 +1,9 @@
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    background-color: azure; 
+    gap:1rem;
+    padding:1rem;
+    
+}
+

@@ -1,0 +1,131 @@
+/* ========== BASE (DESKTOP DEFAULT) ========== */
+.product-page {
+  display: flex;
+  gap: 3rem;
+}
+
+.product-container {
+  margin-top: 2rem;    
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  flex: 1;
+}
+
+.card-container {
+  width: 10rem;
+  height: 10rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.card-container p {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- No product found section --- */
+.no-product-found {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: #254336;
+  font-family: "Poppins", sans-serif;
+}
+
+.sad-smiliey {
+  font-size: 80px;
+  color: #9dad7f;
+  margin-bottom: 15px;
+}
+
+/* ========== TABLET VIEW ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .no-product-found {
+    height: 55vh;
+  }
+
+  .sad-smiliey {
+    font-size: 65px;
+  }
+
+  .no-product-found p {
+    font-size: 18px;
+  }
+}
+
+/* ========== MOBILE VIEW (put LAST so it overrides others) ========== */
+@media (max-width: 768px) {
+  .product-page {
+   flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #fafafa;
+  }
+
+  .product-container {
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .card-container {
+    width: 90%;
+    max-width: 180px;
+    margin: 0;
+  }
+
+  .no-product-found {
+    height: 30%;
+    width:100%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    padding: 10px;
+    margin-left: 10rem;
+  }
+
+  .sad-smiliey {
+    font-size: 50px;
+    margin-left: 5rem;
+  }
+
+  .no-product-found p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}

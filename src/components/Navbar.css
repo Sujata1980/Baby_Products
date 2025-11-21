@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+/* 🖥️ Desktop Menu */
+.menu-desktop {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navlink {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: #ff3f6c;
+}
+
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff3f6c;
+  transition: width 0.3s ease-in-out;
+}
+
+.navlink:hover::after,
+.navlink.active::after {
+  width: 100%;
+}
+
+.navlink.active {
+  color: #ff3f6c;
+  font-weight: 600;
+}
+
+/* 📱 Mobile dropdown menu */
+.menu-mobile {
+  position: relative;
+  width: 250px;
+  display: none; /* hidden on desktop */
+}
+
+.menu-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+
+.dropdown-menu li {
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+
+.dropdown-menu li:hover {
+  background-color: #ffe6eb;
+  color: #ff3f6c;
+}
+
+/* Cart icon */
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: 5px;
+  margin-top: 1rem;
+  margin-right: 0.1rem;
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔄 Responsive */
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none; /* hide desktop menu */
+  }
+
+  .menu-mobile {
+    display: block; /* show dropdown searchbar */
+    width: 180px;
+  }
+
+  .menu-input {
+    font-size: 0.9rem;
+  }
+}

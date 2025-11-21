@@ -1,0 +1,102 @@
+/* .product-detail{
+    display:flex;
+    justify-content: center;
+    margin-top:4rem;
+    gap:4rem;
+}
+.btn{
+    display:flex;
+    gap:10px;
+    background-color: #c83349;
+    color:white;
+    border: none;
+    padding:15px 80px;
+    font-size: 18px;
+    border-radius: 5px;
+} */
+
+.product-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* 🖼 Product Image */
+.product-detail img {
+  width: 35vw; /* responsive width — scales with viewport */
+  max-width: 400px; /* upper limit for large screens */
+  min-width: 250px; /* lower limit for small screens */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Info */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 400px;
+}
+
+.product-info h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Add to Bag Button */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #c83349;
+  color: white;
+  border: none;
+  padding: 15px 80px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a82a3d;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive: Tablets and Mobiles */
+@media (max-width: 1024px) {
+  .product-detail img {
+    width: 45vw;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .product-detail img {
+    width: 70vw;
+    max-width: 280px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
