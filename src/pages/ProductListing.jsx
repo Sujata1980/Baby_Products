@@ -67,7 +67,7 @@ const ProductListing = ({ showAll = false }) => {
           <div className="no-product-found">
             <div>
            <PiSmileySadLight className="sad-smiliey" />
-          <p>Sorry....No Products Found Of This Range....</p>
+          <p>Sorry..No Products Found Of This Range....</p>
           </div>
           </div>
           
